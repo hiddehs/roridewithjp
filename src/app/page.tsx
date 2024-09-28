@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import asset1 from "./assets/Asset 1.png";
 import asset2 from "./assets/Asset 2.png";
@@ -10,8 +11,14 @@ import asset8 from "./assets/Asset 8.png";
 import top from "./assets/artboard 8.png";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { console } from "inspector";
+import { getcredit } from "./actions/getcredit";
+
+
 
 export default function Home() {
+
+
   return (
     <div className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-2 pb-20 sm:gap-16 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -35,18 +42,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-slate-800 leading-none p-8 rounded-lg">
+        <div className="bg-slate-800 leading-none p-8 my-8 rounded-lg">
           <h3 className="mb-2">Get your credit</h3>
           <p className="text-muted mb-4">
             No Habbo credits allowed. Ro-ro-rogier pricing applies (€ 17,50).
             Date T.B.D.
           </p>
 
-          <div className="flex gap-2 flex-col mt-2">
-            <Input placeholder="The name of your Bike"></Input>
-            <Input placeholder="Your name"></Input>
-            <Button>Get Credit</Button>
-          </div>
+          <form action={getcredit} className="flex gap-2 text-black flex-col mt-8">
+            <Input name="bike" placeholder="The name of your Bike"></Input>
+            <Input name="name" placeholder="Your name"></Input>
+            <Button type="submit">Get Credit</Button>
+          </form>
+          {/* <p>Bedankt, jonge! Doar hej me mooi mit holden. We gaait der wat moois van maken!</p> */}
         </div>
         {/* <Input placeholder=""></Input> */}
 
