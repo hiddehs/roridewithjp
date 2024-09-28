@@ -13,21 +13,20 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { console } from "inspector";
 import { useFormState, useFormStatus } from "react-dom";
-import { getCredit } from "./actions/getCredit";
+import { getcredit } from "./actions/getcredit";
 
 const initialState = {
-  success: null,
+  success: 0,
 };
 
 export default function Home() {
-  const { disabled } = useFormStatus();
-  const [state, formAction] = useFormState(getCredit, initialState);
+  const [state, formAction] = useFormState(getcredit, initialState);
 
   return (
     <div className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-2 pb-20 sm:gap-16 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <div className="flex gap-12 flex-wrap sm:flex-nowrap items-start">
-          <Image src={top} className="w-[200px] sm:w-[300px]" width="300" />
+          <Image alt="moi plaatje" src={top} className="w-[200px] sm:w-[300px]" width="300" />
           <div className="flex flex-col gap-8 justify-start items-start">
             <div className="bg-[#77C8C5] leading-none p-4 rounded-xl">
               <h1 className="text-6xl sm:text-[6rem]">RORIDE WITH JP</h1>
@@ -51,7 +50,7 @@ export default function Home() {
                 17,50). Date T.B.D..
               </p>
 
-              {state.success === null ? (
+              {state.success === 0 ? (
                 <form
                   action={formAction}
                   className="flex gap-2 text-black flex-col mt-8"
@@ -61,11 +60,9 @@ export default function Home() {
                     placeholder="The name of your Bike"
                   ></Input>
                   <Input name="name" placeholder="Your name"></Input>
-                  <Button disabled={disabled} type="submit">
-                    Get Credit
-                  </Button>
+                  <Button type="submit">Get Credit</Button>
                 </form>
-              ) : state.success === true ? (
+              ) : state.success === 1 ? (
                 <p className="border border-green-500 p-4 rounded bg-green-800/20 font-bold">
                   Bedankt, jonge! Doar hej me mooi mit holden. We gaait der wat
                   moois van maken! (de Credit ontvang je snel)

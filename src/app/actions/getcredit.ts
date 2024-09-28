@@ -1,7 +1,7 @@
 "use server";
 import { db } from '@vercel/postgres';
 
-export async function getCredit(prevState: any, formData: FormData) {
+export async function getcredit(prevState: any, formData: FormData) {
   const query = `
     INSERT INTO credits (name, bike_name, paid)
     VALUES ($1, $2, false)  -- false as the default for paid
@@ -15,7 +15,7 @@ export async function getCredit(prevState: any, formData: FormData) {
     const result = await db.query(query, values);  // Use the proper method for your DB driver
     // return result.rows[0];  // Return inserted row
     return {
-      success: true,
+      success: 1,
     };
   } catch (error) {
     console.error("Error inserting credit:", error);
@@ -23,6 +23,6 @@ export async function getCredit(prevState: any, formData: FormData) {
   }
 
   return {
-    success: false,
+    success: 2,
   };
 }
