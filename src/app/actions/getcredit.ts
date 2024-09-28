@@ -1,7 +1,7 @@
 "use server";
 import { db } from '@vercel/postgres';
 
-export async function getcredit(prevState: any, formData: FormData) {
+export async function getCredit(prevState: any, formData: FormData) {
   const query = `
     INSERT INTO credits (name, bike_name, paid)
     VALUES ($1, $2, false)  -- false as the default for paid

@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { console } from "inspector";
 import { useFormState, useFormStatus } from "react-dom";
-import { getcredit } from "./actions/getCredit";
+import { getCredit } from "./actions/getCredit";
 
 const initialState = {
   success: null,
@@ -21,7 +21,7 @@ const initialState = {
 
 export default function Home() {
   const { disabled } = useFormStatus();
-  const [state, formAction] = useFormState(getcredit, initialState);
+  const [state, formAction] = useFormState(getCredit, initialState);
 
   return (
     <div className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-2 pb-20 sm:gap-16 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
