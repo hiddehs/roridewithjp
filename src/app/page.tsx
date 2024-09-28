@@ -12,8 +12,8 @@ import top from "./assets/artboard 8.png";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { console } from "inspector";
-import { getcredit } from "./actions/getCredit";
 import { useFormState, useFormStatus } from "react-dom";
+import { getcredit } from "./actions/getCredit";
 
 const initialState = {
   success: null,
