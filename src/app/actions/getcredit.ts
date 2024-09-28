@@ -1,40 +1,28 @@
 "use server";
+import { db } from '@vercel/postgres';
 
-// const pushToSheet = async (sheetId, range, values, apiKey) => {
-//   const sheets = google.sheets({ version: "v4" });
+export async function getcredit(prevState: any, formData: FormData) {
+  const query = `
+    INSERT INTO credits (name, bike_name, paid)
+    VALUES ($1, $2, false)  -- false as the default for paid
+    RETURNING *;
+  `;
 
-//   const request = {
-//     spreadsheetId: sheetId,
-//     range: range, // Example: 'Sheet1!A1:B2'
-//     valueInputOption: "RAW",
-//     resource: {
-//       values,
-//     },
-//     key: apiKey,
-//   };
-
-//   try {
-//     const response = await sheets.spreadsheets.values.update(request);
-//     return response.data;
-//   } catch (err) {
-//     console.error("Error pushing data to Google Sheets", err);
-//     throw err;
-//   }
-// };
-
-export async function getcredit(formData: FormData) {
-  console.log(formData.get("name"));
-  console.log(formData.get("bike"));
-
+  // Execute the query with a database client (e.g., using 'pg' or another driver)
+  const values = [formData.get("name"), formData.get("bike")];
+  
   try {
-    const sheetId = "your-google-sheet-id"; // Replace with your Google Sheet ID
-    const range = "Sheet1!A1"; // Define the range where you want to start inserting values
-    const apiKey = "your-api-key"; // Replace with your Google Sheets API key
-
-    // const response = await pushToSheet(sheetId, range, values, apiKey);
-
-    return "";
+    const result = await db.query(query, values);  // Use the proper method for your DB driver
+    // return result.rows[0];  // Return inserted row
+    return {
+      success: true,
+    };
   } catch (error) {
-    console.error("error", error);
+    console.error("Error inserting credit:", error);
+    // throw new Error("Failed to insert credit.");
   }
+
+  return {
+    success: false,
+  };
 }
