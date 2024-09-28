@@ -15,7 +15,7 @@ export default function Home() {
           <h1>RORIDE WITH JP</h1>
         </div>
         <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
-          <h2 class="text-[#4B2567]">A KILLER WORKOUT AT <a href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6" className="underline" target="_blank">KAATSTRAAT 59 UTRECHT</a></h2>
+          <h2 className="text-[#4B2567]">A KILLER WORKOUT AT <a href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6" className="underline" target="_blank">KAATSTRAAT 59 UTRECHT</a></h2>
         </div>
 
 [get your unique credit here]
@@ -23,8 +23,8 @@ export default function Home() {
 [get your unique credit here]
 [get your unique credit here]
 
-        <div class="bg-[#98835F] mt-12 p-6 text-center sm:text-left sm:flex-row  flex-col gap-4 rounded flex items-center w-full">
-          <h3 class="mr-4 flex-shrink-0">
+        <div className="bg-[#98835F] mt-12 p-6 text-center sm:text-left sm:flex-row  flex-col gap-4 rounded flex items-center w-full">
+          <h3 className="mr-4 flex-shrink-0">
             FEATURING
             <br />
             MUSIC FROM
