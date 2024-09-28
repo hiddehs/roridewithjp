@@ -7,6 +7,7 @@ import asset5 from "./assets/Asset 5.png";
 import asset6 from "./assets/Asset 6.png";
 import asset7 from "./assets/Asset 7.svg";
 import asset8 from "./assets/Asset 8.png";
+import top from "./assets/artboard 8.png";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -14,20 +15,25 @@ export default function Home() {
   return (
     <div className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-2 pb-20 sm:gap-16 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div className="bg-[#77C8C5] leading-none p-4 rounded-xl">
-          <h1>RORIDE WITH JP</h1>
-        </div>
-        <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
-          <h2 className="text-[#4B2567]">
-            A KILLER WORKOUT AT{" "}
-            <a
-              href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6"
-              className="underline"
-              target="_blank"
-            >
-              KAATSTRAAT 59 UTRECHT
-            </a>
-          </h2>
+        <div className="flex gap-4 flex-wrap sm:flex-nowrap items-center">
+          <Image src={top} width="300" />
+          <div className="flex flex-col gap-8 justify-start items-start">
+            <div className="bg-[#77C8C5] leading-none p-4 rounded-xl">
+              <h1>RORIDE WITH JP</h1>
+            </div>
+            <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
+              <h2 className="text-[#4B2567]">
+                A KILLER WORKOUT AT{" "}
+                <a
+                  href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6"
+                  className="underline"
+                  target="_blank"
+                >
+                  KAATSTRAAT 59 UTRECHT
+                </a>
+              </h2>
+            </div>
+          </div>
         </div>
         <div className="bg-slate-800 leading-none p-8 rounded-lg">
           <h3 className="mb-2">Get your credit</h3>
