@@ -24,7 +24,7 @@ export default function Home() {
 [get your unique credit here]
 
         <div className="bg-[#98835F] mt-12 p-6 text-center sm:text-left sm:flex-row  flex-col gap-4 rounded flex items-center w-full">
-          <h3 className="mr-4 flex-shrink-0">
+          <h3 className="mr-4 flex-shrink-0 leading-none">
             FEATURING
             <br />
             MUSIC FROM
