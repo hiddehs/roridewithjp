@@ -61,10 +61,10 @@ export default function Home() {
                   className="flex gap-2 text-black flex-col mt-8"
                 >
                   <Input
-                    name="bike"
+                    name="name"
                     placeholder="What is your name?"
                   ></Input>
-                  <Input name="name" placeholder="And your 06-nummer?"></Input>
+                  <Input name="phone" placeholder="And your 06-nummer?"></Input>
                   <Button type="submit">Sign up for the ro-ride!</Button>
 
                 </form>
