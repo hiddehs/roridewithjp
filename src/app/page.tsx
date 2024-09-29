@@ -23,23 +23,23 @@ export default function Home() {
   const [state, formAction] = useFormState(getcredit, initialState);
 
   return (
-    <div className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-2 pb-20 sm:gap-16 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div className="flex gap-12 flex-wrap sm:flex-nowrap items-start">
+    <div className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-3 pb-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main>
+        <div className="flex flex-wrap sm:flex-nowrap items-start">
           <Image
             alt="moi plaatje"
             src={top}
             className="w-[200px] sm:w-[300px]"
             width="300"
           />
-          <div className="flex flex-col gap-8 justify-start items-start">
+          <div className="flex flex-col gap-4 sm:gap-8 justify-start items-start">
             <div className="bg-[#77C8C5] p-4 rounded-xl">
-              <h1 className="text-4xl leading-[80%] sm:text-[6rem]">
+              <h1 className="leading-[80%] sm:text-[6rem]">
                 RORIDE WITH JP
               </h1>
             </div>
             <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
-              <h2 className="text-[#4B2567] text-2xl sm:text-[4rem] leading-[100%]">
+              <h2 className="text-[#4B2567] sm:text-[4rem] leading-[100%]">
                 THE KILLER WORKOUT AT{" "}
                 <a
                   href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6"
@@ -50,7 +50,7 @@ export default function Home() {
                 </a>
               </h2>
             </div>
-            <div className="bg-slate-800 leading-tight p-8 my-8 rounded-lg">
+            <div className="bg-slate-800 w-full sm:w-auto leading-tight p-8 rounded-lg">
               <h3 className="mb-2">Sign-up here</h3>
               <ol className="text-slate-200 list-disc leading-tight mx-4 my-1">
                 <li>Fill in your real name & 06 🤝 </li>
@@ -91,9 +91,9 @@ export default function Home() {
             </div>
             {/* <Input placeholder=""></Input> */}
 
-            <div className="bg-[#98835F] mt-12 p-6 text-center sm:text-left sm:flex-row  flex-col gap-4 rounded-lg flex flex-wrap items-center w-auto">
+            <div className="bg-[#98835F] p-6 text-center sm:text-left sm:flex-row  flex-col gap-4 rounded-lg flex flex-wrap items-center w-auto">
               <div className="flex flex-col">
-                <h3 className="mr-8 flex-shrink-0 leading-none">
+                <h3 className="sm:mr-8 mb-8 sm:mb-0 flex-shrink-0 leading-none">
                   FEATURING
                   <br />
                   MUSIC FROM
