@@ -9,7 +9,7 @@ export async function getcredit(prevState: any, formData: FormData) {
   `;
 
   // Execute the query with a database client (e.g., using 'pg' or another driver)
-  const values = [formData.get("name"), formData.get("name"), formData.get("phone")];
+  const values = [formData.get("name"), formData.get("name"), formData.get("phone"), false];
   
   try {
     await db.query(query, values);  // Use the proper method for your DB driver

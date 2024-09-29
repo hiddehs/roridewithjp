@@ -34,7 +34,9 @@ export default function Home() {
           />
           <div className="flex flex-col gap-8 justify-start items-start">
             <div className="bg-[#77C8C5] p-4 rounded-xl">
-              <h1 className="text-4xl leading-[80%] sm:text-[6rem]">RORIDE WITH JP</h1>
+              <h1 className="text-4xl leading-[80%] sm:text-[6rem]">
+                RORIDE WITH JP
+              </h1>
             </div>
             <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
               <h2 className="text-[#4B2567] text-2xl sm:text-[4rem] leading-[100%]">
@@ -50,12 +52,12 @@ export default function Home() {
             </div>
             <div className="bg-slate-800 leading-none p-8 my-8 rounded-lg">
               <h3 className="mb-2">Sign-up here</h3>
-                              <ol className="text-slate-200">
-                  <li>Fill in your real name & 06 🤝 </li>
-                  <li>We will send a Whatsapp with the date & time ⏰ </li>
-                  <li>When confirmed, you'll get a €17,50 Tikkie ✅</li>
-                  <li>And you'll added to the groupchat 🪩</li>
-                </ol>
+              <ol className="text-slate-200">
+                <li>Fill in your real name & 06 🤝 </li>
+                <li>We will send a Whatsapp with the date & time ⏰ </li>
+                <li>When confirmed, you'll get a €17,50 Tikkie ✅</li>
+                <li>And you'll added to the groupchat 🪩</li>
+              </ol>
               <p className="text-muted mb-4">We'll send you a confirmation</p>
 
               {state.success === 0 ? (
@@ -63,8 +65,17 @@ export default function Home() {
                   action={formAction}
                   className="flex gap-2 text-black flex-col mt-8"
                 >
-                  <Input required name="name" placeholder="What is your name?"></Input>
-                  <Input required name="phone" placeholder="And your 06-nummer?"></Input>
+                  <Input
+                    required
+                    name="name"
+                    placeholder="What is your name?"
+                  ></Input>
+                  <Input
+                    required
+                    name="phone"
+                    type="tel"
+                    placeholder="And your 06-nummer?"
+                  ></Input>
                   <Button type="submit">Sign up for the ro-ride!</Button>
                 </form>
               ) : state.success === 1 ? (
