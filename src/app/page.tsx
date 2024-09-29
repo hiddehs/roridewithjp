@@ -33,7 +33,7 @@ export default function Home() {
             </div>
             <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
               <h2 className="text-[#4B2567] text-2xl sm:text-[4rem] leading-[100%]">
-                A KILLER WORKOUT AT{" "}
+                THE KILLER WORKOUT AT{" "}
                 <a
                   href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6"
                   className="underline"
