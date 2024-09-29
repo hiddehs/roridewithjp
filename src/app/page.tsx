@@ -92,8 +92,8 @@ export default function Home() {
             {/* <Input placeholder=""></Input> */}
 
             <div className="bg-[#98835F] p-6 text-center sm:text-left sm:flex-row  flex-col gap-4 rounded-lg flex flex-wrap items-center w-auto">
-              <div className="flex flex-col">
-                <h3 className="sm:mr-8 mb-8 sm:mb-0 flex-shrink-0 leading-none">
+              <div className="flex flex-col sm:flex-row flex-nowrap">
+                <h3 className="sm:mr-8 mb-8 mt-2 sm:mb-0 flex-shrink-0 leading-none">
                   FEATURING
                   <br />
                   MUSIC FROM
