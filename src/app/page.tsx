@@ -81,7 +81,7 @@ export default function Home() {
               ) : state.success === 1 ? (
                 <p className="border border-green-500 p-4 rounded bg-green-800/20 font-bold">
                   Bedankt, jonge! Doar hej me mooi mit holden. We gaait der wat
-                  moois van maken! (de Credit ontvang je snel)
+                  moois van maken! (You'll receive the Ro-Roride-JP-rocycle-Credit after payment)
                 </p>
               ) : (
                 <p className="border border-red-500 p-4 rounded bg-red-800/20 font-bold">
