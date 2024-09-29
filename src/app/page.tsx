@@ -29,10 +29,10 @@ export default function Home() {
           <Image alt="moi plaatje" src={top} className="w-[200px] sm:w-[300px]" width="300" />
           <div className="flex flex-col gap-8 justify-start items-start">
             <div className="bg-[#77C8C5] leading-none p-4 rounded-xl">
-              <h1 className="text-6xl sm:text-[6rem]">RORIDE WITH JP</h1>
+              <h1 className="text-4xl sm:text-[6rem]">RORIDE WITH JP</h1>
             </div>
             <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
-              <h2 className="text-[#4B2567] text-3xl sm:text-[4rem] leading-[100%]">
+              <h2 className="text-[#4B2567] text-2xl sm:text-[4rem] leading-[100%]">
                 A KILLER WORKOUT AT{" "}
                 <a
                   href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6"
@@ -44,11 +44,16 @@ export default function Home() {
               </h2>
             </div>
             <div className="bg-slate-800 leading-none p-8 my-8 rounded-lg">
-              <h3 className="mb-2">Get your Credit</h3>
+              <h3 className="mb-2">Sign-up here</h3>
               <p className="text-muted mb-4">
-                No Habbo credits allowed. Ro-ro-rogier pricing applies (€
-                17,50). Date T.B.D..
+                <ol>
+                <li>Fill in your real name & 06 🤝 </li>
+                  <li>We will send a Whatsapp with the date & time ⏰ </li>
+                  <li>When confirmed, you'll get a €17,50 Tikkie ✅</li>
+                  <li>And you'll added to the groupchat 🪩</li>
+                  </ol>
               </p>
+              <p className="text-muted mb-4">We'll send you a confirmation</p>
 
               {state.success === 0 ? (
                 <form
@@ -57,10 +62,11 @@ export default function Home() {
                 >
                   <Input
                     name="bike"
-                    placeholder="The name of your Bike"
+                    placeholder="What is your name?"
                   ></Input>
-                  <Input name="name" placeholder="Your name"></Input>
-                  <Button type="submit">Get Credit</Button>
+                  <Input name="name" placeholder="And your 06-nummer?"></Input>
+                  <Button type="submit">Sign up for the ro-ride!</Button>
+
                 </form>
               ) : state.success === 1 ? (
                 <p className="border border-green-500 p-4 rounded bg-green-800/20 font-bold">
