@@ -50,20 +50,20 @@ export default function Home() {
                 </a>
               </h2>
             </div>
-            <div className="bg-slate-800 leading-none p-8 my-8 rounded-lg">
+            <div className="bg-slate-800 leading-tight p-8 my-8 rounded-lg">
               <h3 className="mb-2">Sign-up here</h3>
-              <ol className="text-slate-200">
+              <ol className="text-slate-200 list-disc leading-tight mx-4 my-1">
                 <li>Fill in your real name & 06 🤝 </li>
                 <li>We will send a Whatsapp with the date & time ⏰ </li>
                 <li>When confirmed, you'll get a €17,50 Tikkie ✅</li>
                 <li>And you'll added to the groupchat 🪩</li>
               </ol>
-              <p className="text-muted mb-4">We'll send you a confirmation</p>
+              <p className="my-4">We'll send you a confirmation</p>
 
               {state.success === 0 ? (
                 <form
                   action={formAction}
-                  className="flex gap-2 text-black flex-col mt-8"
+                  className="flex gap-2 text-black flex-col"
                 >
                   <Input
                     required
@@ -79,7 +79,7 @@ export default function Home() {
                   <Button type="submit">Sign up for the ro-ride!</Button>
                 </form>
               ) : state.success === 1 ? (
-                <p className="border border-green-500 p-4 rounded bg-green-800/20 font-bold">
+                <p className="border leading-normal border-green-500 p-4 rounded bg-green-800/20 font-bold">
                   Bedankt, jonge! Doar hej me mooi mit holden. We gaait der wat
                   moois van maken! (You'll receive the Ro-Roride-JP-rocycle-Credit after payment)
                 </p>
