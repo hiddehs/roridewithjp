@@ -58,7 +58,7 @@ export default function Home() {
           <Image
             alt="moi plaatje"
             src={top}
-            className="w-[200px] rounded-xl sm:w-[300px]"
+            className="w-[200px] rounded-full sm:w-[300px]"
             width="300"
           />
           <div className="flex flex-col gap-4 sm:gap-8 justify-start items-start">
@@ -119,7 +119,8 @@ export default function Home() {
                 ref={counterRef}
                 className="my-4 text-2xl font-bold transition-all duration-1000 ease-in-out"
                 style={{
-                  transform: placesRemaining === 5 ? 'scale(1)' : 'scale(0.8)',
+                  transitionTimingFunction: "cubic-bezier(0.68, -0.55, 0, 3.18)",
+                  transform: placesRemaining === 5 ? 'scale(1.02)' : 'scale(0.85)',
                   color: placesRemaining === 5 ? '#ff4136' : 'inherit',
                 }}
               >
