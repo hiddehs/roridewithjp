@@ -20,7 +20,27 @@ const wild = localFont({
 
 export const metadata: Metadata = {
   title: "Roride With JP | Rocycle",
-  description: "A Killer Workout with your lovely instructor, JP! Featuring the best music!",
+  description: "A rocycle workout with your lovely instructor, JP! Featuring the best music!",
+  openGraph: {
+    title: "Roride With JP | Rocycle",
+    description: "A rocycle workout with your lovely instructor, JP! Featuring the best music!",
+    type: "website",
+    url: "https://roridewithjp.rocycle.co/",
+    images: [
+      {
+        url: "/assets/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Roride With JP",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roride With JP | Rocycle",
+    description: "A Killer Workout with your lovely instructor, JP! Featuring the best music!",
+    images: ["/assets/thumbnail.png"],
+  },
 };
 
 export default function RootLayout({
