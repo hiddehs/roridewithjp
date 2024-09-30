@@ -1,4 +1,5 @@
 "use client";
+import React, { useState, useEffect, useRef } from 'react';
 import Image from "next/image";
 import asset1 from "./assets/Asset 1.png";
 import asset2 from "./assets/Asset 2.png";
@@ -11,8 +12,7 @@ import asset8 from "./assets/Asset 8.png";
 import top from "./assets/artboard 8.png";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { console } from "inspector";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormState } from "react-dom";
 import { getcredit } from "./actions/getcredit";
 
 const initialState = {
@@ -21,6 +21,35 @@ const initialState = {
 
 export default function Home() {
   const [state, formAction] = useFormState(getcredit, initialState);
+  const [placesRemaining, setPlacesRemaining] = useState(6);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            setPlacesRemaining(5);
+          }, 500);
+        }
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1,
+      }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-3 pb-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -59,26 +88,25 @@ export default function Home() {
               </ol>
 
               {state.success === 0 ? (
-                    <form
-                    action={formAction}
-                    className="flex gap-2 text-black flex-col"
-                  >
-                    <Input
-                      required
-                      name="name"
-                      placeholder="What is your name?"
-                      className="text-lg py-3 px-4" // Increased text size and padding
-                    ></Input>
-                    <Input
-                      required
-                      name="phone"
-                      type="tel"
-                      placeholder="And your 06-nummer?"
-                      className="text-lg py-3 px-4" // Increased text size and padding
-                    ></Input>
-                    <Button type="submit" className="text-lg py-3">Sign up for the ro-ride!</Button>
-                  </form>
-                
+                <form
+                  action={formAction}
+                  className="flex gap-2 text-black flex-col"
+                >
+                  <Input
+                    required
+                    name="name"
+                    placeholder="What is your name?"
+                    className="text-lg py-3 px-4"
+                  ></Input>
+                  <Input
+                    required
+                    name="phone"
+                    type="tel"
+                    placeholder="And your 06-nummer?"
+                    className="text-lg py-3 px-4"
+                  ></Input>
+                  <Button type="submit" className="text-lg py-3">Sign up for the ro-ride!</Button>
+                </form>
               ) : state.success === 1 ? (
                 <p className="border leading-normal border-green-500 p-4 rounded bg-green-800/20 font-bold">
                   Waanzinnig, je krijg snel een appje. <i>En no hop, op 'e fyts en kilometers meitsje!</i>
@@ -89,10 +117,18 @@ export default function Home() {
                 </p>
               )}
 
-              <p className="my-4">⏳ Only 6 places remaining!</p>
+              <p 
+                ref={counterRef}
+                className="my-4 text-2xl font-bold transition-all duration-1000 ease-in-out"
+                style={{
+                  transform: placesRemaining === 5 ? 'scale(1.2)' : 'scale(1)',
+                  color: placesRemaining === 5 ? '#ff4136' : 'inherit',
+                }}
+              >
+                ⏳ Only {placesRemaining} places remaining!
+              </p>
 
             </div>
-            {/* <Input placeholder=""></Input> */}
 
             <div className="bg-[#98835F] p-6 text-center sm:text-left sm:flex-row  flex-col gap-4 rounded-lg flex flex-wrap items-center w-auto">
               <div className="flex flex-col sm:flex-row flex-nowrap">
@@ -113,7 +149,6 @@ export default function Home() {
                     src={asset8}
                     height="30"
                   ></Image>
-
                   <Image
                     alt="powerful company"
                     className="brightness-[1000]"
