@@ -58,7 +58,7 @@ export default function Home() {
           <Image
             alt="moi plaatje"
             src={top}
-            className="w-[200px] sm:w-[300px]"
+            className="w-[200px] rounded-xl sm:w-[300px]"
             width="300"
           />
           <div className="flex flex-col gap-4 sm:gap-8 justify-start items-start">
@@ -96,16 +96,14 @@ export default function Home() {
                     required
                     name="name"
                     placeholder="What is your name?"
-                    className="text-lg py-3 px-4"
                   ></Input>
                   <Input
                     required
                     name="phone"
                     type="tel"
                     placeholder="And your 06-nummer?"
-                    className="text-lg py-3 px-4"
                   ></Input>
-                  <Button type="submit" className="text-lg py-3">Sign up for the ro-ride!</Button>
+                  <Button size="lg" type="submit">Sign up for the ro-ride!</Button>
                 </form>
               ) : state.success === 1 ? (
                 <p className="border leading-normal border-green-500 p-4 rounded bg-green-800/20 font-bold">
