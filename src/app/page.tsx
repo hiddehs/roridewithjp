@@ -184,7 +184,7 @@ export default function Home() {
               </div>
               <div className="flex gap-4 mt-10 flex-wrap justify-center sm:justify-start items-start">
                 <div className="border-black border-[0.6rem] max-w-[18rem] text-center bg-white text-2xl text-black p-5 leading-none font-[Arial] font-bold">
-                  Binnen Roken Toegestaan
+                  Binnen Roken Niet Toegestaan
                 </div>
                 <div className="border-black border-[0.6rem] max-w-[18rem] text-center bg-white text-2xl text-black p-5 leading-none font-[Arial] font-bold">
                   Rookcycle is Dodelijk. Turn the Dial to 8.{" "}
