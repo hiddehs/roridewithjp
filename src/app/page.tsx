@@ -69,13 +69,13 @@ export default function Home() {
             </div>
             <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
               <h3 className="text-[#4B2567] sm:text-[3rem] leading-[100%]">
-                THE KILLER WORKOUT AT{" "}
+                SUNDAY 20TH OF OCTOBER AT{" "}
                 <a
                   href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6"
                   className="underline"
                   target="_blank"
                 >
-                  KAATSTRAAT 59 UTRECHT
+                  ROCYCLE UTRECHT
                 </a>
               </h3>
             </div>
