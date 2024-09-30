@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import asset1 from "./assets/Asset 1.png";
 import asset2 from "./assets/Asset 2.png";
@@ -35,7 +35,7 @@ export default function Home() {
       },
       {
         root: null,
-        rootMargin: '0px',
+        rootMargin: "0px",
         threshold: 0.1,
       }
     );
@@ -63,9 +63,7 @@ export default function Home() {
           />
           <div className="flex flex-col gap-4 sm:gap-8 justify-start items-start">
             <div className="bg-[#77C8C5] p-4 rounded-xl">
-              <h2 className="leading-[80%] sm:text-[4rem]">
-                RORIDE WITH JP
-              </h2>
+              <h2 className="leading-[80%] sm:text-[4rem]">RORIDE WITH JP</h2>
             </div>
             <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
               <h3 className="text-[#4B2567] sm:text-[3rem] leading-[100%]">
@@ -79,7 +77,7 @@ export default function Home() {
                 </a>
               </h3>
             </div>
-            <div className="bg-slate-800 w-full sm:w-auto leading-tight p-8 rounded-lg">
+            <div className="bg-slate-800 w-full sm:w-auto leading-tight p-4 sm:p-8 rounded-lg">
               <h2 className="mb-2">Sign-up here</h2>
               <ol className="text-slate-200 list-decimal leading-tight mx-4 my-1">
                 <li>Fill in your real name & 06 🤝 </li>
@@ -103,11 +101,14 @@ export default function Home() {
                     type="tel"
                     placeholder="And your 06-nummer?"
                   ></Input>
-                  <Button size="lg" type="submit">Sign up for the ro-ride!</Button>
+                  <Button size="lg" type="submit">
+                    Sign up for the ro-ride!
+                  </Button>
                 </form>
               ) : state.success === 1 ? (
                 <p className="border leading-normal border-green-500 p-4 rounded bg-green-800/20 font-bold">
-                  Waanzinnig, je krijg snel een appje. <i>En no hop, op 'e fyts en kilometers meitsje!</i>
+                  Waanzinnig, je krijg snel een appje.{" "}
+                  <i>En no hop, op 'e fyts en kilometers meitsje!</i>
                 </p>
               ) : (
                 <p className="border border-red-500 p-4 rounded bg-red-800/20 font-bold">
@@ -115,18 +116,18 @@ export default function Home() {
                 </p>
               )}
 
-              <p 
+              <p
                 ref={counterRef}
-                className="my-4 text-2xl font-bold transition-all duration-1000 ease-in-out"
+              
+                className="my-4 text-2xl text-center font-bold duration-1200 ease-in-out"
                 style={{
                   transitionTimingFunction: "cubic-bezier(0.68, -0.55, 0, 3.18)",
                   transform: placesRemaining === 5 ? 'scale(1.02)' : 'scale(0.85)',
-                  color: placesRemaining === 5 ? '#ff4136' : 'inherit',
+                  color: placesRemaining === 5 ? "#ff4136" : "inherit",
                 }}
               >
                 ⏳ Only {placesRemaining} places remaining!
               </p>
-
             </div>
 
             <div className="bg-[#98835F] p-6 text-center sm:text-left sm:flex-row  flex-col gap-4 rounded-lg flex flex-wrap items-center w-auto">
