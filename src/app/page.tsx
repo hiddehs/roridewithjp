@@ -90,7 +90,7 @@ export default function Home() {
               {state.success === 0 ? (
                 <form
                   action={formAction}
-                  className="flex gap-2 text-black flex-col"
+                  className="flex gap-2 my-4 text-black flex-col"
                 >
                   <Input
                     required
