@@ -119,9 +119,9 @@ export default function Home() {
               <p
                 ref={counterRef}
               
-                className="my-4 text-2xl text-center font-bold duration-1200 ease-in-out"
+                className="my-4 text-2xl text-center font-bold duration-1000 transition-all ease-in-out"
                 style={{
-                  transitionTimingFunction: "cubic-bezier(0.68, -0.55, 0, 3.18)",
+                  transitionTimingFunction: "cubic-bezier(0.48, -0.25, 0.3, 2.57)",
                   transform: placesRemaining === 5 ? 'scale(1.02)' : 'scale(0.85)',
                   color: placesRemaining === 5 ? "#ff4136" : "inherit",
                 }}
