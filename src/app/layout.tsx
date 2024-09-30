@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://roridewithjp.rocycle.co/",
     images: [
       {
-        url: "/assets/thumbnail.png",
+        url: "images/thumbnail.png",
         width: 1200,
         height: 630,
         alt: "Roride With JP",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Roride With JP | Rocycle",
     description: "A Killer Workout with your lovely instructor, JP! Featuring the best music!",
-    images: ["/assets/thumbnail.png"],
+    images: ["images/thumbnail.png"],
   },
 };
 
