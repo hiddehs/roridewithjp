@@ -9,7 +9,7 @@ import asset5 from "./assets/Asset 5.png";
 import asset6 from "./assets/Asset 6.png";
 import asset7 from "./assets/Asset 7.svg";
 import asset8 from "./assets/Asset 8.png";
-import top from "./assets/artboard 8.png";
+import top from "./assets/artboard69.png";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useFormState } from "react-dom";
