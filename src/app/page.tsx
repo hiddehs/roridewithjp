@@ -34,12 +34,12 @@ export default function Home() {
           />
           <div className="flex flex-col gap-4 sm:gap-8 justify-start items-start">
             <div className="bg-[#77C8C5] p-4 rounded-xl">
-              <h1 className="leading-[80%] sm:text-[5rem]">
+              <h2 className="leading-[80%] sm:text-[4rem]">
                 RORIDE WITH JP
-              </h1>
+              </h2>
             </div>
             <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
-              <h2 className="text-[#4B2567] sm:text-[3rem] leading-[100%]">
+              <h3 className="text-[#4B2567] sm:text-[3rem] leading-[100%]">
                 THE KILLER WORKOUT AT{" "}
                 <a
                   href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6"
@@ -48,46 +48,49 @@ export default function Home() {
                 >
                   KAATSTRAAT 59 UTRECHT
                 </a>
-              </h2>
+              </h3>
             </div>
             <div className="bg-slate-800 w-full sm:w-auto leading-tight p-8 rounded-lg">
               <h2 className="mb-2">Sign-up here</h2>
-              <ol className="text-slate-200 list-disc leading-tight mx-4 my-1">
+              <ol className="text-slate-200 list-decimal leading-tight mx-4 my-1">
                 <li>Fill in your real name & 06 🤝 </li>
-                <li>We will send a Whatsapp with the date & time ⏰ </li>
-                <li>When confirmed, you'll get a €17,50 Tikkie ✅</li>
-                <li>And you'll added to the groupchat 🪩</li>
+                <li>We will send a Whatsapp with Tikkie⏰ </li>
+                <li>We add you to the groupchat 🪩</li>
               </ol>
-              <p className="my-4">We'll send you a confirmation</p>
 
               {state.success === 0 ? (
-                <form
-                  action={formAction}
-                  className="flex gap-2 text-black flex-col"
-                >
-                  <Input
-                    required
-                    name="name"
-                    placeholder="What is your name?"
-                  ></Input>
-                  <Input
-                    required
-                    name="phone"
-                    type="tel"
-                    placeholder="And your 06-nummer?"
-                  ></Input>
-                  <Button type="submit">Sign up for the ro-ride!</Button>
-                </form>
+                    <form
+                    action={formAction}
+                    className="flex gap-2 text-black flex-col"
+                  >
+                    <Input
+                      required
+                      name="name"
+                      placeholder="What is your name?"
+                      className="text-lg py-3 px-4" // Increased text size and padding
+                    ></Input>
+                    <Input
+                      required
+                      name="phone"
+                      type="tel"
+                      placeholder="And your 06-nummer?"
+                      className="text-lg py-3 px-4" // Increased text size and padding
+                    ></Input>
+                    <Button type="submit" className="text-lg py-3">Sign up for the ro-ride!</Button>
+                  </form>
+                
               ) : state.success === 1 ? (
                 <p className="border leading-normal border-green-500 p-4 rounded bg-green-800/20 font-bold">
-                  Bedankt, jonge! Doar hej me mooi mit holden. We gaait der wat
-                  moois van maken! (You'll receive the Ro-Roride-JP-rocycle-Credit after payment)
+                  Waanzinnig, je krijg snel een appje. <i>En no hop, op 'e fyts en kilometers meitsje!</i>
                 </p>
               ) : (
                 <p className="border border-red-500 p-4 rounded bg-red-800/20 font-bold">
                   We hebb'n problem, poar nemn!
                 </p>
               )}
+
+              <p className="my-4">⏳ Only 6 places remaining!</p>
+
             </div>
             {/* <Input placeholder=""></Input> */}
 
