@@ -54,14 +54,14 @@ export default function Home() {
   return (
     <div className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-3 pb-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main>
-        <div className="flex flex-wrap sm:flex-nowrap gap-4 items-start">
+        <div className="flex flex-wrap sm:flex-nowrap gap-4 sm:items-start sm:gap-12 items-center sm:justify-start justify-center">
           <Image
             alt="moi plaatje"
             src={top}
             className="w-[200px] rounded-full sm:w-[300px]"
             width="300"
           />
-          <div className="flex flex-col gap-4 sm:gap-8 justify-start items-start">
+          <div className="flex flex-col gap-4 sm:gap-8 sm:justify-start justify-center items-center text-center sm:text-left sm:items-start">
             <div className="bg-[#77C8C5] p-4 rounded-xl">
               <h2 className="leading-[80%] sm:text-[4rem]">RORIDE WITH JP</h2>
             </div>
@@ -77,7 +77,7 @@ export default function Home() {
                 </a>
               </h3>
             </div>
-            <div className="bg-slate-800 w-full sm:w-auto leading-tight p-4 sm:p-8 rounded-lg">
+            <div className="bg-slate-800 w-full sm:w-auto leading-tight p-4 sm:p-10 rounded-lg">
               <h2 className="mb-2">Sign-up here</h2>
               <ol className="text-slate-200 list-decimal leading-tight mx-4 my-1">
                 <li>Fill in your real name & 06 🤝 </li>
@@ -119,7 +119,7 @@ export default function Home() {
               <p
                 ref={counterRef}
               
-                className="my-4 text-2xl text-center font-bold duration-1000 transition-all ease-in-out"
+                className="mt-6 text-2xl text-center font-bold duration-1000 transition-all ease-in-out"
                 style={{
                   transitionTimingFunction: "cubic-bezier(0.48, -0.25, 0.3, 2.57)",
                   transform: placesRemaining === 5 ? 'scale(1.02)' : 'scale(0.85)',
