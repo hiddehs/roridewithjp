@@ -119,7 +119,7 @@ export default function Home() {
                 ref={counterRef}
                 className="my-4 text-2xl font-bold transition-all duration-1000 ease-in-out"
                 style={{
-                  transform: placesRemaining === 5 ? 'scale(1.1)' : 'scale(0.9)',
+                  transform: placesRemaining === 5 ? 'scale(1)' : 'scale(0.8)',
                   color: placesRemaining === 5 ? '#ff4136' : 'inherit',
                 }}
               >
