@@ -67,7 +67,7 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const fadeInClass = (index) =>
+  const fadeInClass = (index: number) =>
     `opacity-0 transition-opacity duration-500 ${
       visibleElements > index ? "opacity-100" : ""
     }`;
