@@ -23,6 +23,7 @@ export default function Home() {
   const [state, formAction] = useFormState(getcredit, initialState);
   const [placesRemaining, setPlacesRemaining] = useState(6);
   const counterRef = useRef(null);
+  const [visibleElements, setVisibleElements] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,6 +52,26 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const totalElements = 7; // Adjust this number based on the number of main elements
+    const interval = setInterval(() => {
+      setVisibleElements((prev) => {
+        if (prev < totalElements) {
+          return prev + 1;
+        }
+        clearInterval(interval);
+        return prev;
+      });
+    }, 200); // Adjust the interval for faster/slower animation
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const fadeInClass = (index) =>
+    `opacity-0 transition-opacity duration-500 ${
+      visibleElements > index ? "opacity-100" : ""
+    }`;
+
   return (
     <div className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-3 pb-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main>
@@ -58,19 +79,19 @@ export default function Home() {
           <Image
             alt="moi plaatje"
             src={top}
-            className="w-[200px] rounded-full sm:w-[300px]"
+            className={`w-[200px] rounded-full sm:w-[300px] ${fadeInClass(0)}`}
             width="300"
           />
           <div className="flex flex-col gap-4 sm:gap-8 sm:justify-start justify-center items-center text-center sm:text-left sm:items-start">
-            <div className="bg-[#77C8C5] p-4 rounded-xl sm:w-1/2">
+            <div className={`bg-[#77C8C5] p-4 rounded-xl sm:w-1/2 ${fadeInClass(1)}`}>
               <h2 className="leading-[80%] sm:text-[4rem]">RORIDE WITH JP</h2>
             </div>
-            <div className="bg-[#909DCF] leading-none p-4 rounded-xl sm:w-1/2">
+            <div className={`bg-[#909DCF] leading-none p-4 rounded-xl sm:w-1/2 ${fadeInClass(2)}`}>
               <h3 className="text-[#4B2567] sm:text-[3rem] text-[2.4rem] leading-[100%]">
                 SUNDAY 20TH OF OCTOBER
               </h3>
             </div>
-            <div className="bg-[#E4727F] leading-none p-4 rounded-xl sm:w-1/2">
+            <div className={`bg-[#E4727F] leading-none p-4 rounded-xl sm:w-1/2 ${fadeInClass(3)}`}>
               <h3 className="text-[#66232A] sm:text-[3rem] text-[2.4rem] leading-[100%]">
                 13:45 AT {" "}
                 <a
@@ -82,7 +103,7 @@ export default function Home() {
                 </a>
               </h3>
             </div>
-            <div className="bg-slate-800 w-full sm:w-auto leading-tight p-4 sm:p-10 rounded-lg">
+            <div className={`bg-slate-800 w-full sm:w-auto leading-tight p-4 sm:p-10 rounded-lg ${fadeInClass(4)}`}>
               <h2 className="mb-2">Sign-up here</h2>
               <ol className="text-slate-200 list-decimal leading-tight mx-4 my-1 sm:text-left text-center sm:list-inside list-outside">
                 <li><strong>Fill in</strong> your real name & 06 🤝 </li>
@@ -123,7 +144,6 @@ export default function Home() {
 
               <p
                 ref={counterRef}
-              
                 className="mt-6 text-2xl text-center font-bold duration-1000 transition-all ease-in-out"
                 style={{
                   transitionTimingFunction: "cubic-bezier(0.48, -0.25, 0.3, 2.57)",
@@ -135,7 +155,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-[#98835F] p-6 text-center sm:text-left sm:flex-row  flex-col gap-4 rounded-lg flex flex-wrap items-center w-auto">
+            <div className={`bg-[#98835F] p-6 text-center sm:text-left sm:flex-row flex-col gap-4 rounded-lg flex flex-wrap items-center w-auto ${fadeInClass(5)}`}>
               <div className="flex flex-col sm:flex-row flex-nowrap">
                 <h3 className="sm:mr-8 mb-8 mt-2 sm:mb-0 flex-shrink-0 leading-none">
                   FEATURING
@@ -204,7 +224,7 @@ export default function Home() {
         </div>
 
         <a
-          className="opacity-15 underline"
+          className={`opacity-15 underline ${fadeInClass(6)}`}
           target="_blank"
           href="https://github.com/hiddehs/roridewithjp"
         >
