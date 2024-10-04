@@ -62,16 +62,16 @@ export default function Home() {
             width="300"
           />
           <div className="flex flex-col gap-4 sm:gap-8 sm:justify-start justify-center items-center text-center sm:text-left sm:items-start">
-            <div className="bg-[#77C8C5] p-4 rounded-xl">
+            <div className="bg-[#77C8C5] p-4 rounded-xl sm:w-1/2">
               <h2 className="leading-[80%] sm:text-[4rem]">RORIDE WITH JP</h2>
             </div>
-            <div className="bg-[#909DCF] leading-none p-4 rounded-xl">
-              <h3 className="text-[#4B2567] sm:text-[3rem] leading-[100%]">
+            <div className="bg-[#909DCF] leading-none p-4 rounded-xl sm:w-1/2">
+              <h3 className="text-[#4B2567] sm:text-[3rem] text-[2.4rem] leading-[100%]">
                 SUNDAY 20TH OF OCTOBER
               </h3>
             </div>
-            <div className="bg-[#E4727F] leading-none p-4 rounded-xl">
-              <h3 className="text-[#66232A] sm:text-[3rem] leading-[100%]">
+            <div className="bg-[#E4727F] leading-none p-4 rounded-xl sm:w-1/2">
+              <h3 className="text-[#66232A] sm:text-[3rem] text-[2.4rem] leading-[100%]">
                 13:45 AT {" "}
                 <a
                   href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6"
@@ -84,10 +84,10 @@ export default function Home() {
             </div>
             <div className="bg-slate-800 w-full sm:w-auto leading-tight p-4 sm:p-10 rounded-lg">
               <h2 className="mb-2">Sign-up here</h2>
-              <ol className="text-slate-200 list-decimal leading-tight mx-4 my-1">
-                <li>Fill in your real name & 06 🤝 </li>
-                <li>We will send a Whatsapp with Tikkie⏰ </li>
-                <li>We add you to the groupchat 🪩</li>
+              <ol className="text-slate-200 list-decimal leading-tight mx-4 my-1 sm:text-left text-center sm:list-inside list-outside">
+                <li><strong>Fill in</strong> your real name & 06 🤝 </li>
+                <li>We will send <strong>a Whatsapp</strong> with Tikkie⏰ </li>
+                <li>We add you to <strong>the groupchat</strong> 🪩</li>
               </ol>
 
               {state.success === 0 ? (
