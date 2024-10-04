@@ -207,16 +207,15 @@ export default function Home() {
                   ></Image>
                 </div>
               </div>
-              <div className="flex gap-4 mt-10 flex-wrap justify-center sm:justify-start items-start">
-                <div className="border-black border-[0.6rem] max-w-[18rem] text-center bg-white text-2xl text-black p-5 leading-none font-[Arial] font-bold">
+              <div className="flex gap-2 mt-6 flex-wrap justify-center sm:justify-start items-start">
+                <div className="border-black border-[0.42rem] max-w-[12.6rem] text-center bg-white text-sm text-black p-3 leading-none font-[Arial] font-bold">
                   Binnen Roken Niet Toegestaan
                 </div>
-                <div className="border-black border-[0.6rem] max-w-[18rem] text-center bg-white text-2xl text-black p-5 leading-none font-[Arial] font-bold">
-                  Rookcycle is Dodelijk. Turn the Dial to 8.{" "}
+                <div className="border-black border-[0.42rem] max-w-[12.6rem] text-center bg-white text-sm text-black p-3 leading-none font-[Arial] font-bold">
+                  Rookcycle is Dodelijk. Turn the Dial to 8.
                 </div>
-                <div className="border-black border-[0.6rem] max-w-[24rem] text-center bg-white text-2xl text-black p-5 leading-none font-[Arial] font-bold">
-                  Sporten kan de bloedsomloop verbeteren en veroorzaakt
-                  impotentie
+                <div className="border-black border-[0.42rem] max-w-[16.8rem] text-center bg-white text-sm text-black p-3 leading-none font-[Arial] font-bold">
+                  Sporten kan de bloedsomloop verbeteren en veroorzaakt impotentie
                 </div>
               </div>
             </div>
