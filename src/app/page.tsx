@@ -144,7 +144,7 @@ export default function Home() {
 
               <p
                 ref={counterRef}
-                className="mt-6 text-2xl text-center font-bold duration-1000 transition-all ease-in-out"
+                className="mt-6 text-2xl text-center font-bold duration-1000 delay-1000 transition-all ease-in-out"
                 style={{
                   transitionTimingFunction: "cubic-bezier(0.48, -0.25, 0.3, 2.57)",
                   transform: placesRemaining === 5 ? 'scale(1.02)' : 'scale(0.85)',
