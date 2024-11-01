@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useActionState } from "react";
 import Image from "next/image";
 import asset1 from "./assets/Asset 1.png";
 import asset2 from "./assets/Asset 2.png";
@@ -20,7 +20,7 @@ const initialState = {
 };
 
 export default function Home() {
-  const [state, formAction] = useFormState(getcredit, initialState);
+  const [state, formAction, isPending] = useActionState(getcredit, initialState);
   const [placesRemaining, setPlacesRemaining] = useState(6);
   const counterRef = useRef(null);
   const [visibleElements, setVisibleElements] = useState(0);
@@ -127,7 +127,7 @@ export default function Home() {
                     type="tel"
                     placeholder="And your 06-nummer?"
                   ></Input>
-                  <Button size="lg" type="submit">
+                  <Button disabled={isPending} size="lg" type="submit">
                     Sign up for the ro-ride!
                   </Button>
                 </form>
