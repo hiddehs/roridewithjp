@@ -88,7 +88,7 @@ export default function Home() {
             </div>
             <div className={`bg-[#909DCF] leading-none p-4 rounded-xl sm:w-1/2 ${fadeInClass(2)}`}>
               <h3 className="text-[#4B2567] sm:text-[3rem] text-[2.4rem] leading-[100%]">
-                SUNDAY 20TH OF OCTOBER
+                SATURDAY 1 FEBRUARY, 2025
               </h3>
             </div>
             <div className={`bg-[#E4727F] leading-none p-4 rounded-xl sm:w-1/2 ${fadeInClass(3)}`}>
