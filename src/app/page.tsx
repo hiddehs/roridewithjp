@@ -25,29 +25,27 @@ export default function Home () {
   const id = [...params.keys()][0]
   return (
     <div
-      className="grid text-white bg-slate-900 items-center justify-items-center min-h-screen p-3 pb-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      className="grid text-white items-center justify-items-center min-h-screen p-3 pb-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main>
         <div
-          className="flex flex-wrap sm:flex-nowrap gap-4 sm:items-start sm:gap-12 items-center sm:justify-start justify-center">
+          className="flex flex-wrap sm:flex-nowrap gap-6 sm:items-start sm:gap-12 items-center sm:justify-start justify-center">
           <Image
             alt="moi plaatje"
             src={top}
-            className={`w-[200px] rounded-full sm:w-[300px]`}
+            className={`w-[150px] rounded-full sm:w-[250px]`}
             width="300"
           />
           <div className="space-y-6  text-center sm:text-left sm:items-start">
             <div
-              className="md:flex space-y-3 justify-start md:flex-wrap md:items-end gap-2 align-start">
-              <div className={`bg-[#77C8C5] p-4 rounded`}>
+              className={`bg-slate-300 text-[#4B2567] max-w-md w-full sm:w-auto leading-tight p-6 rounded`}
+            >
+              <div className="space-y-2 mb-4">
                 <h2 className="leading-[80%]">RORIDE WITH JP</h2>
-              </div>
-              <div className={`bg-[#909DCF] leading-none p-2 rounded`}>
-                <h3 className="text-[#4B2567] leading-[100%]">
+
+                <h3 className="leading-[100%]">
                   ZATERDAG 1 FEBRUARI, 2025
                 </h3>
-              </div>
-              <div className={`bg-[#E4727F] leading-none p-2 rounded`}>
-                <h3 className="text-[#66232A] leading-[100%]">
+                <h3 className=" leading-[100%]">
                   13:45 BIJ{' '}
                   <a
                     href="https://maps.app.goo.gl/DZJNTfBLEpKV8cfj6"
@@ -58,13 +56,9 @@ export default function Home () {
                   </a>
                 </h3>
               </div>
-            </div>
-            <div
-              className={`bg-slate-300 max-w-md w-full sm:w-auto leading-tight p-6 rounded`}
-            >
               <Button
                 className={
-                  'bg-[#34346D] relative shadow-md hover:bg-[#39a4a1] flex gap-4 whitespace-normal justify-between text-left rounded-xl w-full p-6 font-heading text-2xl'
+                  'bg-[#34346D] relative shadow-md hover:bg-[#39a4a1] flex gap-2 whitespace-normal justify-between text-left rounded-xl w-full p-6 font-heading text-2xl'
                 }
                 disabled={isPending}
                 size="lg"
@@ -80,7 +74,7 @@ export default function Home () {
                   <span
                     className="relative inline-flex rounded-full size-4 shadow bg-[#39a4a1]"></span>
                 </span>
-                <div>Reserveer je spot <div>€ 17,50</div></div>
+                <div>Reserveer je spot</div>
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -101,6 +95,7 @@ export default function Home () {
                       clipRule="evenodd"
                     ></path>
                   </svg>
+                  <div className={"text-xs font-sans w-full text-center mt-2 text-slate-300"}>€17,50</div>
                 </div>
               </Button>
 
@@ -124,7 +119,7 @@ export default function Home () {
               <div className="flex flex-col sm:flex-row flex-nowrap">
                 <h3
                   className="sm:mr-8 mb-8 mt-2 sm:mb-0 flex-shrink-0 leading-none">
-                  FEATURING
+                FEATURING
                   <br/>
                   MUSIC FROM
                 </h3>
