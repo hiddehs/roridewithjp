@@ -16,7 +16,6 @@ export async function getSimpleCredit (id: string = 'unk') {
       return redirect('https://tikkie.me/pay/vviu641gn1k2i9nj1775')
     } catch (error) {
       console.error('Error inserting credit:', error)
-      // throw new Error("Failed to insert credit.");
     }
   }
   return redirect('https://tikkie.me/pay/vviu641gn1k2i9nj1775')
