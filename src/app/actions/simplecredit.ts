@@ -12,14 +12,12 @@ export async function getSimpleCredit (id: string) {
             RETURNING *;
     `
     try {
-      await db.query(query, [`DIRECT PAYMENT ID ${id}`])  // Use the proper method for your DB driver
-      return redirect('https://tikkie.me/pay/ptbtjc8t4japo9gg8qo9')
+      await db.query(query, [`DIRECT PAYMENT ID ${id}`])
+      return redirect('https://tikkie.me/pay/vviu641gn1k2i9nj1775')
     } catch (error) {
       console.error('Error inserting credit:', error)
       // throw new Error("Failed to insert credit.");
     }
   }
-
-  // https://tikkie.me/pay/ptbtjc8t4japo9gg8qo9
-  return redirect('https://tikkie.me/pay/ptbtjc8t4japo9gg8qo9')
+  return redirect('https://tikkie.me/pay/vviu641gn1k2i9nj1775')
 }
