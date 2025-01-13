@@ -3,7 +3,7 @@
 import { redirect } from 'next/navigation'
 import { db } from '@vercel/postgres'
 
-export async function getSimpleCredit (id: string) {
+export async function getSimpleCredit (id: string = 'unk') {
   if (id) {
     console.log(`Saving simple credit registration for ${id}`)
     const query = `
