@@ -13,10 +13,10 @@ export async function getSimpleCredit (id: string = 'unk') {
     `
     try {
       await db.query(query, [`DIRECT PAYMENT ID ${id}`])
-      return redirect('https://tikkie.me/pay/vviu641gn1k2i9nj1775')
+      return redirect('https://tikkie.me/pay/ueaob7mkc9402d6blf7c')
     } catch (error) {
       console.error('Error inserting credit:', error)
     }
   }
-  return redirect('https://tikkie.me/pay/vviu641gn1k2i9nj1775')
+  return redirect('https://tikkie.me/pay/ueaob7mkc9402d6blf7c')
 }
